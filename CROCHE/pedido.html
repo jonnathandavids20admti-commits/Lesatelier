@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Pedido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🧶Lêsatelier🧶</div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="pedido.html">Pedidos</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Meu Carrinho</h1>
+    <div id="carrinho"></div>
+    <h2 id="total"></h2>
+    <h2>Dados do Cliente</h2>
+
+<form id="form-cliente">
+    <input type="text" id="nome" placeholder="Seu nome" required><br><br>
+
+    <input type="tel" id="telefone" placeholder="WhatsApp (DDD + número)" required><br><br>
+
+    <textarea id="endereco" placeholder="Endereço completo para entrega" required></textarea><br><br>
+</form>
+    <h2>Pagamento</h2>
+
+<div class="pix-box">
+    <p><strong>Forma de pagamento:</strong> Pix</p>
+    <p><strong>Chave Pix:</strong></p>
+
+    <input 
+        type="text" 
+        id="pix-chave" 
+        value="21986361352" 
+        readonly
+    >
+
+    <button onclick="copiarPix()">📋 Copiar chave Pix</button>
+
+    <p style="margin-top:10px;">
+        Após o pagamento, envie o comprovante pelo WhatsApp.
+    </p>
+</div>
+
+    <button onclick="finalizarPedido()" class="btn">
+        Finalizar pedido no WhatsApp
+    </button>
+</main>
+
+
+<script src="js/carrinho.js"></script>
+</body>
+</html>
